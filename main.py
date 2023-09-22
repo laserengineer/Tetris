@@ -9,8 +9,15 @@ screen = pygame.display.set_mode((300, 600)) # Set game window display canvas si
 pygame.display.set_caption("Python Tetris")
 
 clock = pygame.time.Clock()
+
 game_grid = Grid()
+
+game_grid.grid[0][0] = 1
+game_grid.grid[3][5] = 4
+game_grid.grid[17][8] = 7
+
 game_grid.print_grid()
+
 # game frame per second 
 
 # Game Loop 

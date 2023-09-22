@@ -28,6 +28,8 @@ class Grid:
         for row in range(self.num_rows):
             for column in range(self.num_cols):
                 cell_value = self.grid[row][column]
+                # Rect (x,y,w,h), x and y coordinate of its top left corner , its width and its height
                 cell_rect = pygame.Rect(column*self.cell_size + 1, row*self.cell_size + 1, self.cell_size - 1, self.cell_size - 1 )
+                # pygame.draw.rect(surface, color, rect )
                 pygame.draw.rect(screen, self.colors[cell_value], cell_rect)
         
