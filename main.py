@@ -1,5 +1,6 @@
 import pygame, sys
 from grid import Grid
+from blocks import *
 
 # Initialize the game 
 pygame.init()
@@ -12,14 +13,11 @@ clock = pygame.time.Clock()
 
 game_grid = Grid()
 
-game_grid.grid[0][0] = 1
-game_grid.grid[3][5] = 4
-game_grid.grid[17][8] = 7
-
-game_grid.print_grid()
+block = LBlock()
+block1 = JBlock()
 
 # game frame per second 
-
+ 
 # Game Loop 
 # 1. Event Handling 
 # 2. Updating Positions
@@ -34,8 +32,11 @@ while True:
             sys.exit()
     
     # Drawing
+    # The background is dark_blue, the rect is dark_grey 
     screen.fill(dark_blue)
     game_grid.draw(screen)
+    block.draw(screen)
+    block1.draw(screen)
 
     # Create grid of 10 columns and 20 rows , the game pieces call tetrominoes 
         
