@@ -13,8 +13,7 @@ clock = pygame.time.Clock()
 
 game_grid = Grid()
 
-block = LBlock()
-block1 = JBlock()
+block = ZBlock()
 
 # game frame per second 
  
@@ -36,7 +35,6 @@ while True:
     screen.fill(dark_blue)
     game_grid.draw(screen)
     block.draw(screen)
-    block1.draw(screen)
 
     # Create grid of 10 columns and 20 rows , the game pieces call tetrominoes 
         
