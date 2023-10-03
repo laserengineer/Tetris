@@ -14,7 +14,7 @@ clock = pygame.time.Clock()
 game = Game()
 
 Game_Update = pygame.USEREVENT
-pygame.time.set_timer(Game_Update, 20)
+pygame.time.set_timer(Game_Update, 200)
 
 # game frame per second
 
@@ -31,7 +31,7 @@ while True:
             sys.exit()
         if event.type == pygame.KEYDOWN:
             if game.game_over == True:
-                game.game_over == False
+                game.game_over = False
                 game.reset()                
             if event.key == pygame.K_LEFT and game.game_over == False:
                 game.move_left()
