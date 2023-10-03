@@ -20,7 +20,7 @@ next_rect = pygame.Rect(320, 215, 170, 180)
 # Set game window display canvas size 300 * 600
 screen = pygame.display.set_mode((500, 620) )  
 pygame.display.set_caption("Python Tetris")
-
+ 
 
 clock = pygame.time.Clock()
 game = Game()
@@ -58,11 +58,9 @@ while True:
         
         if event.type == Game_Update and game.game_over == False:
             game.move_down()
+             
+              
             
-                
-                
-            
-
     # Drawing
     # The background is dark_blue, the rect is dark_grey
     score_value_surface = title_font.render(str(game.score), True, Colors.white)
